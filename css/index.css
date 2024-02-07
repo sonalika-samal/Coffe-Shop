@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --main-color: #d3ad7f;
+  --black: #13131a;
+  --bg: #010103;
+  --border: 0.1 rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+body {
+  background: var(--bg);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2.5vh;
+  color: var(--main-color);
+  background: var(--bg);
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  padding: 5px;
+  position: absolute;
+  left: 33vh;
+  top: 5vh;
+}
+
+.btn:hover {
+  color: var(--main-color);
+  background: var(--bg);
+  border: 2px solid var(--main-color);
+}
+
+#btn {
+  font-size: 2.5vh;
+  color: var(--main-color);
+  background: var(--bg);
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.menu-button {
+  display: none;
+  font-size: 2.5vh;
+  color: var(--main-color);
+  background: var(--bg);
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  left: 22vh;
+  top: 5vh;
+}
+
+.header {
+  height: 97px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 2.5vh;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+.cart-item {
+  padding-bottom: 20px;
+}
+
+.cart-item img {
+  height: 35vh;
+  width: 35vh;
+}
+
+.logo img {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 30px;
+  position: absolute;
+  top: 3vh;
+  left: 3vh;
+}
+
+#img {
+  height: 80vh;
+  width: 150vh;
+  margin-top: 50px;
+}
+
+.X {
+  width: 120vh;
+}
+
+.bucket {
+  background-color: var(--bg);
+  color: var(--main-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20vh 0 0;
+  column-gap: 12px;
+}
+
+.container3 {
+  background-color: var(--main-color);
+  color: var(--bg);
+  column-gap: 30px;
+  height: auto;
+  width: 391px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid var(--main-color);
+}
+
+.item img {
+  background-color: var(--main-color);
+  border-radius: 4px;
+  height: 200px;
+  width: 150px;
+  margin: 20px 0px 20px;
+}
+
+.heading {
+  position: absolute;
+  top: 20vh;
+  left: 4vh;
+  color: wheat;
+  font-weight: bolder;
+}
+
+section {
+  background-color: #13131a;
+  color: var(--main-color);
+  padding: 4vh;
+  margin: 4vh;
+  font-size: 2vh;
+  margin: 20px auto;
+}
+
+.site-footer {
+  background-color: var(--black);
+  color: var(--main-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  text-decoration: underline;
+}
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+    /* Show the menu button on mobile devices */
+  }
+
+  .navbar {
+    display: none;
+    /* Hide the menu initially on mobile */
+    width: 100%;
+    /* Full width */
+    text-align: center;
+    /* Center the links */
+  }
+
+  .navbar.show {
+    display: block;
+    height: 28vh;
+    width: 22vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg);
+  }
+
+  #img {
+    width: 100vh;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews - The Golden Beans Coffee</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #010103;
+        color: #d3ad7f;
+      }
+
+      header {
+        background-color: #010103;
+        color: #d3ad7f;
+        padding: 10px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #13131a;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        background-color: #010103;
+        color: #d3ad7f;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border: 2px solid #d3ad7f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Golden Beans Coffee</h1>
+    </header>
+    <main>
+      <h2>Customer Reviews</h2>
+      <div id="reviews">
+        <!-- Display customer reviews here -->
+      </div>
+      <form id="reviewForm">
+        <label for="customerName">Your Name:</label>
+        <input type="text" id="customerName" required /> <br /><br />
+
+        <label for="reviewContent">Your Review:</label>
+        <textarea id="reviewContent" required></textarea>
+
+        <button type="button" onclick="submitReview()">Submit Review</button>
+      </form>
+    </main>
+
+    <div class="xyz" style="text-align: center">
+      <h1>Hope U Have A Great Experince with Us😊...</h1>
+
+      <a href="reviews.html" style="text-align: center"
+        ><button>
+          Check Out The Reviews Of Some Of Our Happy Customers😊 >>
+        </button></a
+      >
+    </div>
+
+    <script>
+      function submitReview() {
+        var customerName = document.getElementById("customerName").value;
+        var reviewContent = document.getElementById("reviewContent").value;
+
+        if (customerName && reviewContent) {
+          var reviewDiv = document.createElement("div");
+          reviewDiv.classList.add("review");
+          reviewDiv.innerHTML =
+            "<strong>" + customerName + ":</strong> " + reviewContent;
+
+          document.getElementById("reviews").appendChild(reviewDiv);
+
+          // Clear the form fields
+          document.getElementById("customerName").value = "";
+          document.getElementById("reviewContent").value = "";
+        } else {
+          alert("Please fill in all fields before submitting the review.");
+        }
+      }
+    </script>
+  </body>
+</html>
